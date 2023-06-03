@@ -316,40 +316,76 @@ border-top-color: rgb(0, 0, 0);
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>366</x>
-      <y>292</y>
-      <width>291</width>
-      <height>191</height>
+      <x>430</x>
+      <y>300</y>
+      <width>141</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="Images_rc.qrc">:/Tratamiento_Imagenes/images/img01.jpeg</pixmap>
+     <pixmap resource="Images_rc.qrc">:/Tratamiento_Imagenes/images/img04.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="Led">
+   <widget class="QPushButton" name="ON">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>500</y>
-      <width>75</width>
-      <height>23</height>
+      <x>410</x>
+      <y>420</y>
+      <width>91</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Rockwell Extra Bold</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(170, 255, 127);</string>
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 70, 46);
+border-top-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Led</string>
+     <string>ON</string>
     </property>
     <property name="default">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="OFF">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>420</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Rockwell Extra Bold</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+border-top-color: rgb(255, 255, 255);
+</string>
+    </property>
+    <property name="text">
+     <string>OFF</string>
     </property>
    </widget>
    <zorder>Button01</zorder>
@@ -363,7 +399,8 @@ background-color: rgb(170, 255, 127);</string>
    <zorder>textEdit_4</zorder>
    <zorder>tableWidget</zorder>
    <zorder>label</zorder>
-   <zorder>Led</zorder>
+   <zorder>ON</zorder>
+   <zorder>OFF</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -17,6 +17,7 @@ matplotlib.use('Qt5Agg')
 import math
 import random
 import datetime
+import Images_rc
 
 
 # Datos

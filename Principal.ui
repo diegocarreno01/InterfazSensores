@@ -332,6 +332,26 @@ border-top-color: rgb(0, 0, 0);
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="Led">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>500</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(170, 255, 127);</string>
+    </property>
+    <property name="text">
+     <string>Led</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
    <zorder>Button01</zorder>
    <zorder>Label01</zorder>
    <zorder>Button04</zorder>
@@ -343,6 +363,7 @@ border-top-color: rgb(0, 0, 0);
    <zorder>textEdit_4</zorder>
    <zorder>tableWidget</zorder>
    <zorder>label</zorder>
+   <zorder>Led</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -353,8 +374,59 @@ border-top-color: rgb(0, 0, 0);
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionNuevo"/>
+   </widget>
+   <widget class="QMenu" name="menuSystem">
+    <property name="title">
+     <string>Opciones</string>
+    </property>
+    <addaction name="actionGrafica1"/>
+    <addaction name="separator"/>
+    <addaction name="actionGrafica2"/>
+    <addaction name="separator"/>
+    <addaction name="actionGrafica3"/>
+    <addaction name="separator"/>
+    <addaction name="actionGrafica4"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSystem"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="Images_rc.qrc">
+     <normaloff>:/Tratamiento_Imagenes/images/archivo.png</normaloff>:/Tratamiento_Imagenes/images/archivo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+  </action>
+  <action name="actionGrafica1">
+   <property name="text">
+    <string>Grafica1</string>
+   </property>
+  </action>
+  <action name="actionGrafica2">
+   <property name="text">
+    <string>Grafica2</string>
+   </property>
+  </action>
+  <action name="actionGrafica3">
+   <property name="text">
+    <string>Grafica3</string>
+   </property>
+  </action>
+  <action name="actionGrafica4">
+   <property name="text">
+    <string>Grafica4</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="Images_rc.qrc"/>

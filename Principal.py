@@ -16,7 +16,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.Label01 = QtWidgets.QLabel(self.centralwidget)
-        self.Label01.setGeometry(QtCore.QRect(10, 290, 651, 261))
+        self.Label01.setGeometry(QtCore.QRect(10, 290, 341, 261))
         self.Label01.setStyleSheet("background-color: rgb(235, 255, 213);")
         self.Label01.setText("")
         self.Label01.setScaledContents(True)
@@ -75,24 +75,27 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.textEdit_2.setFont(font)
-        self.textEdit_2.setStyleSheet("background-color: rgb(255, 85, 0);\n"
+        self.textEdit_2.setStyleSheet("background-color: rgb(0, 85, 255);\n"
+"color: rgb(0, 0, 0);\n"
 "border-top-color: rgb(0, 0, 0);\n"
-"color: rgb(255, 255, 255);\n"
+"\n"
+"\n"
 "")
         self.textEdit_2.setObjectName("textEdit_2")
         self.textEdit_3 = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit_3.setEnabled(False)
         self.textEdit_3.setGeometry(QtCore.QRect(10, 220, 191, 31))
-        self.textEdit_3.setStyleSheet("background-color: rgb(0, 85, 0);\n"
+        self.textEdit_3.setStyleSheet("background-color: rgb(0, 85, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "border-top-color: rgb(0, 0, 0);")
         self.textEdit_3.setObjectName("textEdit_3")
         self.textEdit_4 = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit_4.setEnabled(False)
         self.textEdit_4.setGeometry(QtCore.QRect(10, 150, 191, 31))
-        self.textEdit_4.setStyleSheet("background-color: rgb(85, 85, 127);\n"
+        self.textEdit_4.setStyleSheet("background-color: rgb(0, 85, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "border-top-color: rgb(0, 0, 0);\n"
+"\n"
 "")
         self.textEdit_4.setObjectName("textEdit_4")
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
@@ -133,6 +136,50 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(4, item)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(430, 300, 141, 91))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap(":/Tratamiento_Imagenes/images/img04.png"))
+        self.label.setScaledContents(True)
+        self.label.setObjectName("label")
+        self.ON = QtWidgets.QPushButton(self.centralwidget)
+        self.ON.setGeometry(QtCore.QRect(410, 420, 91, 41))
+        font = QtGui.QFont()
+        font.setFamily("Rockwell Extra Bold")
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ON.setFont(font)
+        self.ON.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(255, 70, 46);\n"
+"border-top-color: rgb(255, 255, 255);")
+        self.ON.setDefault(False)
+        self.ON.setObjectName("ON")
+        self.OFF = QtWidgets.QPushButton(self.centralwidget)
+        self.OFF.setGeometry(QtCore.QRect(530, 420, 91, 41))
+        font = QtGui.QFont()
+        font.setFamily("Rockwell Extra Bold")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.OFF.setFont(font)
+        self.OFF.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 0, 0);\n"
+"border-top-color: rgb(255, 255, 255);\n"
+"")
+        self.OFF.setObjectName("OFF")
+        self.ADQUIRIR = QtWidgets.QPushButton(self.centralwidget)
+        self.ADQUIRIR.setGeometry(QtCore.QRect(440, 480, 151, 41))
+        font = QtGui.QFont()
+        font.setFamily("Rockwell Extra Bold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ADQUIRIR.setFont(font)
+        self.ADQUIRIR.setStyleSheet("background-color: rgb(0, 85, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-color: rgb(255, 255, 255);")
+        self.ADQUIRIR.setObjectName("ADQUIRIR")
         self.Button01.raise_()
         self.Label01.raise_()
         self.Button04.raise_()
@@ -143,14 +190,47 @@ class Ui_MainWindow(object):
         self.textEdit_3.raise_()
         self.textEdit_4.raise_()
         self.tableWidget.raise_()
+        self.label.raise_()
+        self.ON.raise_()
+        self.OFF.raise_()
+        self.ADQUIRIR.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 685, 21))
         self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuSystem = QtWidgets.QMenu(self.menubar)
+        self.menuSystem.setObjectName("menuSystem")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.actionNuevo = QtWidgets.QAction(MainWindow)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/Tratamiento_Imagenes/images/archivo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionNuevo.setIcon(icon)
+        self.actionNuevo.setObjectName("actionNuevo")
+        self.actionGrafica1 = QtWidgets.QAction(MainWindow)
+        self.actionGrafica1.setObjectName("actionGrafica1")
+        self.actionGrafica2 = QtWidgets.QAction(MainWindow)
+        self.actionGrafica2.setObjectName("actionGrafica2")
+        self.actionGrafica3 = QtWidgets.QAction(MainWindow)
+        self.actionGrafica3.setObjectName("actionGrafica3")
+        self.actionGrafica4 = QtWidgets.QAction(MainWindow)
+        self.actionGrafica4.setObjectName("actionGrafica4")
+        self.menuFile.addSeparator()
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionNuevo)
+        self.menuSystem.addAction(self.actionGrafica1)
+        self.menuSystem.addSeparator()
+        self.menuSystem.addAction(self.actionGrafica2)
+        self.menuSystem.addSeparator()
+        self.menuSystem.addAction(self.actionGrafica3)
+        self.menuSystem.addSeparator()
+        self.menuSystem.addAction(self.actionGrafica4)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuSystem.menuAction())
 
         self.retranslateUi(MainWindow)
         self.Button01.clicked.connect(self.Label01.show)
@@ -172,7 +252,7 @@ class Ui_MainWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:600; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ffffff;\">S1 --&gt; Temperatura (°C)</span></p></body></html>"))
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">S1 --&gt; Temperatura (°C)</span></p></body></html>"))
         self.textEdit_3.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -193,4 +273,15 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "S3"))
         item = self.tableWidget.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "S4"))
+        self.ON.setText(_translate("MainWindow", "ON"))
+        self.OFF.setText(_translate("MainWindow", "OFF"))
+        self.ADQUIRIR.setText(_translate("MainWindow", "ADQUIRIR"))
+        self.menuFile.setTitle(_translate("MainWindow", "Archivo"))
+        self.menuSystem.setTitle(_translate("MainWindow", "Opciones"))
+        self.actionNuevo.setText(_translate("MainWindow", "Nuevo"))
+        self.actionGrafica1.setText(_translate("MainWindow", "Grafica1"))
+        self.actionGrafica2.setText(_translate("MainWindow", "Grafica2"))
+        self.actionGrafica3.setText(_translate("MainWindow", "Grafica3"))
+        self.actionGrafica4.setText(_translate("MainWindow", "Grafica4"))
 
+import Images_rc_rc
